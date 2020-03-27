@@ -1,0 +1,19 @@
+function steamrollArray(arr) {
+ var arr2=[],  arr3=[], arrresult=[]
+arr3= arr.filter(x=> Array.isArray(x))
+arr2 =arr.filter(x=>!Array.isArray(x))
+
+function ff(n){
+  let k=0
+ for (let k=0; k<n.length; k++){
+if(!Array.isArray(n[k]))arr2.push(n[k])
+if(Array.isArray(n[k])){ ff(n[k])
+}
+}}
+
+ff(arr3)
+
+  return arr2
+
+  }
+steamrollArray([0,1,2,3,4,[8],  [3, [4]]]);
